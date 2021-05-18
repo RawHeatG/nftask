@@ -1,15 +1,15 @@
-export type Options = {
+export type Option = {
     option: string;
     isRight: boolean;
 }
 
-export type Questions = {
+export type Question = {
     question: string;
-    options: Options[];
+    options: Option[];
 }
 
 export type QuizData = {
     name: string;
     id: number;
-    questions: Questions[];
+    questions: Question[];
 }
