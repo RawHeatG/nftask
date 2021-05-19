@@ -1,17 +1,11 @@
-import {
-  createContext,
-  useContext,
-  useReducer,
-  Dispatch,
-  FC,
-  Reducer,
-} from "react";
+import { createContext, useContext, useReducer, Dispatch, FC } from "react";
 import { State, Action } from "./QuizProvider.type";
 import { QuizReducer } from "./QuizReducer";
 
 const initialState: State = {
-  questionNumber: 0,
-  quizId: null,
+  quizName: null,
+  quizLength: 0,
+  currentQuestionNumber: 0,
   score: 0,
 };
 

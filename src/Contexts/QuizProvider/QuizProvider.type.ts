@@ -1,13 +1,16 @@
-import { Option } from "../../data.type";
+import { Option, QuizData } from "../../data.type";
 
 export type State = {
-    questionNumber: number;
-    quizId: number | null;
+    quizName: string | null;
+    quizLength: number;
+    currentQuestionNumber: number;
+    
     score: number;
 };
 
 export type Action =
-| { type: "SKIP"; payload: Option }
+| { type: "LOAD_QUIZ"; payload: QuizData}
+| { type: "SKIP" }
 | { type: "EVALUATE"; payload: Option };
 
 export type Dispatch = {
