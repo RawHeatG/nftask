@@ -1,71 +1,219 @@
-import { QuizData } from "./data.type"
+import { QuizDb } from "./data.type"
 
-export const quizData: QuizData = {
-    name: "dummy quiz",
-    id: 123,
-    questions:  [
+
+
+export const quizDb: QuizDb = {
+    quizes: [
         {
-            question: "Question 1",
-            options: [
+            name: "Marvel",
+            id: 123,
+            questions:  [
                 {
-                    option: "Option 1",
-                    isRight: false
+                    question: "Question 1",
+                    options: [
+                        {
+                            option: "Option 1",
+                            isRight: false
+                        },
+                        {
+                            option: "Option 2",
+                            isRight: true
+                        }
+                    ]
                 },
                 {
-                    option: "Option 2",
-                    isRight: true
+                    question: "Question 2",
+                    options: [
+                        {
+                            option: "Option 1",
+                            isRight: false
+                        },
+                        {
+                            option: "Option 2",
+                            isRight: true
+                        }
+                    ]
+                },
+                {
+                    question: "Question 3",
+                    options: [
+                        {
+                            option: "Option 1",
+                            isRight: false
+                        },
+                        {
+                            option: "Option 2",
+                            isRight: true
+                        }
+                    ]
+                },
+                {
+                    question: "Question 4",
+                    options: [
+                        {
+                            option: "Option 1",
+                            isRight: false
+                        },
+                        {
+                            option: "Option 2",
+                            isRight: true
+                        }
+                    ]
+                },
+                {
+                    question: "Question 5",
+                    options: [
+                        {
+                            option: "Option 1",
+                            isRight: false
+                        },
+                        {
+                            option: "Option 2",
+                            isRight: true
+                        }
+                    ]
                 }
             ]
         },
         {
-            question: "Question 2",
-            options: [
+            name: "Sacred Games",
+            id: 124,
+            questions:  [
                 {
-                    option: "Option 1",
-                    isRight: false
+                    question: "Question 1",
+                    options: [
+                        {
+                            option: "Option 1",
+                            isRight: false
+                        },
+                        {
+                            option: "Option 2",
+                            isRight: true
+                        }
+                    ]
                 },
                 {
-                    option: "Option 2",
-                    isRight: true
+                    question: "Question 2",
+                    options: [
+                        {
+                            option: "Option 1",
+                            isRight: false
+                        },
+                        {
+                            option: "Option 2",
+                            isRight: true
+                        }
+                    ]
+                },
+                {
+                    question: "Question 3",
+                    options: [
+                        {
+                            option: "Option 1",
+                            isRight: false
+                        },
+                        {
+                            option: "Option 2",
+                            isRight: true
+                        }
+                    ]
+                },
+                {
+                    question: "Question 4",
+                    options: [
+                        {
+                            option: "Option 1",
+                            isRight: false
+                        },
+                        {
+                            option: "Option 2",
+                            isRight: true
+                        }
+                    ]
+                },
+                {
+                    question: "Question 5",
+                    options: [
+                        {
+                            option: "Option 1",
+                            isRight: false
+                        },
+                        {
+                            option: "Option 2",
+                            isRight: true
+                        }
+                    ]
                 }
             ]
         },
         {
-            question: "Question 3",
-            options: [
+            name: "Breaking Bad",
+            id: 125,
+            questions:  [
                 {
-                    option: "Option 1",
-                    isRight: false
+                    question: "Question 1",
+                    options: [
+                        {
+                            option: "Option 1",
+                            isRight: false
+                        },
+                        {
+                            option: "Option 2",
+                            isRight: true
+                        }
+                    ]
                 },
                 {
-                    option: "Option 2",
-                    isRight: true
-                }
-            ]
-        },
-        {
-            question: "Question 4",
-            options: [
-                {
-                    option: "Option 1",
-                    isRight: false
+                    question: "Question 2",
+                    options: [
+                        {
+                            option: "Option 1",
+                            isRight: false
+                        },
+                        {
+                            option: "Option 2",
+                            isRight: true
+                        }
+                    ]
                 },
                 {
-                    option: "Option 2",
-                    isRight: true
-                }
-            ]
-        },
-        {
-            question: "Question 5",
-            options: [
-                {
-                    option: "Option 1",
-                    isRight: false
+                    question: "Question 3",
+                    options: [
+                        {
+                            option: "Option 1",
+                            isRight: false
+                        },
+                        {
+                            option: "Option 2",
+                            isRight: true
+                        }
+                    ]
                 },
                 {
-                    option: "Option 2",
-                    isRight: true
+                    question: "Question 4",
+                    options: [
+                        {
+                            option: "Option 1",
+                            isRight: false
+                        },
+                        {
+                            option: "Option 2",
+                            isRight: true
+                        }
+                    ]
+                },
+                {
+                    question: "Question 5",
+                    options: [
+                        {
+                            option: "Option 1",
+                            isRight: false
+                        },
+                        {
+                            option: "Option 2",
+                            isRight: true
+                        }
+                    ]
                 }
             ]
         }

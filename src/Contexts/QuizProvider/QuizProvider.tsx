@@ -3,8 +3,7 @@ import { State, Action } from "./QuizProvider.type";
 import { QuizReducer } from "./QuizReducer";
 
 const initialState: State = {
-  quizName: null,
-  quizLength: 0,
+  quizData: null,
   currentQuestionNumber: 0,
   score: 0,
 };

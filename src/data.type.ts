@@ -8,8 +8,12 @@ export type Question = {
     options: Option[];
 }
 
-export type QuizData = {
+export type Quiz = {
     name: string;
     id: number;
     questions: Question[];
+}
+
+export type QuizDb = {
+    quizes: Quiz[];
 }

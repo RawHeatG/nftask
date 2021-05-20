@@ -1,14 +1,14 @@
-import { quizData } from "../../data";
 import { useQuiz } from "../../Contexts";
 import "./QuizArena.css";
 
 export function QuizArena() {
   const { state, dispatch } = useQuiz();
-  //dispatch({ type: "SKIP", payload: { option: "yolo", isRight: true } });
-  const { currentQuestionNumber, score } = state;
-
-  return (
+  const { currentQuestionNumber, score, quizData } = state;
+  return !quizData ? (
+    <h1>"Loading..."</h1>
+  ) : (
     <div className="quiz-arena">
+      <h1>{quizData.name}</h1>
       <p style={{ textAlign: "right", width: "100%" }}>{score} : Score</p>
       <h2>{quizData.questions[currentQuestionNumber].question}</h2>
       <ul>
