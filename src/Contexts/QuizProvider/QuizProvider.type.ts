@@ -1,17 +1,17 @@
 import { Option, Quiz } from "../../data.type";
 
-export type State = {
+export type InitialState = {
     quizData: Quiz | null;
     currentQuestionNumber: number;
     score: number;
 };
 
 export type Action =
-| { type: "LOAD_QUIZ"; payload: Quiz}
-| { type: "SKIP" }
-| { type: "EVALUATE"; payload: Option };
+| { type: "LOAD_QUIZ"; payload: Quiz }
+| { type: "EVALUATE"; payload: Option }
+| { type: "NEXT_QUESTION" }
 
 export type Dispatch = {
     action: Action;
-    state: State;
+    state: InitialState;
   }
