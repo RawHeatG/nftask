@@ -1,11 +1,12 @@
 import { createContext, useContext, useReducer, Dispatch, FC } from "react";
-import { Action, InitialState } from "./QuizProvider.type";
+import { Action, InitialState } from "./QuizContext.type";
 import { quizReducer } from "./QuizReducer";
 
 export const initialState: InitialState = {
   quizData: null,
   currentQuestionNumber: 0,
   score: 0,
+  isOptionSelected: false,
 };
 
 const QuizContext = createContext<{

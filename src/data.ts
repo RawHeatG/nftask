@@ -10,69 +10,135 @@ export const quizDb: QuizDb = {
             questions:  [
                 {
                     question: "Question 1",
+                    selected: null,
                     options: [
                         {
                             option: "Option 1",
+                            id: 1,
                             isRight: false
                         },
                         {
                             option: "Option 2",
+                            id: 2,
                             isRight: true
+                        },
+                        {
+                            option: "Option 3",
+                            id: 3,
+                            isRight: false
+                        },
+                        {
+                            option: "Option 4",
+                            id: 4,
+                            isRight: false
                         }
                     ]
                 },
                 {
                     question: "Question 2",
+                    selected: null,
                     options: [
                         {
                             option: "Option 1",
+                            id: 1,
                             isRight: false
                         },
                         {
                             option: "Option 2",
+                            id: 2,
                             isRight: true
+                        },
+                        {
+                            option: "Option 3",
+                            id: 3,
+                            isRight: false
+                        },
+                        {
+                            option: "Option 4",
+                            id: 4,
+                            isRight: false
                         }
                     ]
                 },
                 {
                     question: "Question 3",
+                    selected: null,
                     options: [
                         {
                             option: "Option 1",
+                            id: 1,
                             isRight: false
                         },
                         {
                             option: "Option 2",
+                            id: 2,
                             isRight: true
+                        },
+                        {
+                            option: "Option 3",
+                            id: 3,
+                            isRight: false
+                        },
+                        {
+                            option: "Option 4",
+                            id: 4,
+                            isRight: false
                         }
                     ]
                 },
                 {
                     question: "Question 4",
+                    selected: null,
                     options: [
                         {
                             option: "Option 1",
+                            id: 1,
                             isRight: false
                         },
                         {
                             option: "Option 2",
+                            id: 2,
                             isRight: true
+                        },
+                        {
+                            option: "Option 3",
+                            id: 3,
+                            isRight: false
+                        },
+                        {
+                            option: "Option 4",
+                            id: 4,
+                            isRight: false
                         }
                     ]
                 },
                 {
                     question: "Question 5",
+                    selected: null,
                     options: [
                         {
                             option: "Option 1",
+                            id: 1,
                             isRight: false
                         },
                         {
                             option: "Option 2",
+                            id: 2,
                             isRight: true
+                        },
+                        {
+                            option: "Option 3",
+                            id: 3,
+                            isRight: false
+                        },
+                        {
+                            option: "Option 4",
+                            id: 4,
+                            isRight: false
                         }
                     ]
                 }
+               
             ]
         },
         {
@@ -81,69 +147,135 @@ export const quizDb: QuizDb = {
             questions:  [
                 {
                     question: "Question 1",
+                    selected: null,
                     options: [
                         {
                             option: "Option 1",
+                            id: 1,
                             isRight: false
                         },
                         {
                             option: "Option 2",
+                            id: 2,
                             isRight: true
+                        },
+                        {
+                            option: "Option 3",
+                            id: 3,
+                            isRight: false
+                        },
+                        {
+                            option: "Option 4",
+                            id: 4,
+                            isRight: false
                         }
                     ]
                 },
                 {
                     question: "Question 2",
+                    selected: null,
                     options: [
                         {
                             option: "Option 1",
+                            id: 1,
                             isRight: false
                         },
                         {
                             option: "Option 2",
+                            id: 2,
                             isRight: true
+                        },
+                        {
+                            option: "Option 3",
+                            id: 3,
+                            isRight: false
+                        },
+                        {
+                            option: "Option 4",
+                            id: 4,
+                            isRight: false
                         }
                     ]
                 },
                 {
                     question: "Question 3",
+                    selected: null,
                     options: [
                         {
                             option: "Option 1",
+                            id: 1,
                             isRight: false
                         },
                         {
                             option: "Option 2",
+                            id: 2,
                             isRight: true
+                        },
+                        {
+                            option: "Option 3",
+                            id: 3,
+                            isRight: false
+                        },
+                        {
+                            option: "Option 4",
+                            id: 4,
+                            isRight: false
                         }
                     ]
                 },
                 {
                     question: "Question 4",
+                    selected: null,
                     options: [
                         {
                             option: "Option 1",
+                            id: 1,
                             isRight: false
                         },
                         {
                             option: "Option 2",
+                            id: 2,
                             isRight: true
+                        },
+                        {
+                            option: "Option 3",
+                            id: 3,
+                            isRight: false
+                        },
+                        {
+                            option: "Option 4",
+                            id: 4,
+                            isRight: false
                         }
                     ]
                 },
                 {
                     question: "Question 5",
+                    selected: null,
                     options: [
                         {
                             option: "Option 1",
+                            id: 1,
                             isRight: false
                         },
                         {
                             option: "Option 2",
+                            id: 2,
                             isRight: true
+                        },
+                        {
+                            option: "Option 3",
+                            id: 3,
+                            isRight: false
+                        },
+                        {
+                            option: "Option 4",
+                            id: 4,
+                            isRight: false
                         }
                     ]
                 }
+               
             ]
         },
         {
@@ -152,69 +284,135 @@ export const quizDb: QuizDb = {
             questions:  [
                 {
                     question: "Question 1",
+                    selected: null,
                     options: [
                         {
                             option: "Option 1",
+                            id: 1,
                             isRight: false
                         },
                         {
                             option: "Option 2",
+                            id: 2,
                             isRight: true
+                        },
+                        {
+                            option: "Option 3",
+                            id: 3,
+                            isRight: false
+                        },
+                        {
+                            option: "Option 4",
+                            id: 4,
+                            isRight: false
                         }
                     ]
                 },
                 {
                     question: "Question 2",
+                    selected: null,
                     options: [
                         {
                             option: "Option 1",
+                            id: 1,
                             isRight: false
                         },
                         {
                             option: "Option 2",
+                            id: 2,
                             isRight: true
+                        },
+                        {
+                            option: "Option 3",
+                            id: 3,
+                            isRight: false
+                        },
+                        {
+                            option: "Option 4",
+                            id: 4,
+                            isRight: false
                         }
                     ]
                 },
                 {
                     question: "Question 3",
+                    selected: null,
                     options: [
                         {
                             option: "Option 1",
+                            id: 1,
                             isRight: false
                         },
                         {
                             option: "Option 2",
+                            id: 2,
                             isRight: true
+                        },
+                        {
+                            option: "Option 3",
+                            id: 3,
+                            isRight: false
+                        },
+                        {
+                            option: "Option 4",
+                            id: 4,
+                            isRight: false
                         }
                     ]
                 },
                 {
                     question: "Question 4",
+                    selected: null,
                     options: [
                         {
                             option: "Option 1",
+                            id: 1,
                             isRight: false
                         },
                         {
                             option: "Option 2",
+                            id: 2,
                             isRight: true
+                        },
+                        {
+                            option: "Option 3",
+                            id: 3,
+                            isRight: false
+                        },
+                        {
+                            option: "Option 4",
+                            id: 4,
+                            isRight: false
                         }
                     ]
                 },
                 {
                     question: "Question 5",
+                    selected: null,
                     options: [
                         {
                             option: "Option 1",
+                            id: 1,
                             isRight: false
                         },
                         {
                             option: "Option 2",
+                            id: 2,
                             isRight: true
+                        },
+                        {
+                            option: "Option 3",
+                            id: 3,
+                            isRight: false
+                        },
+                        {
+                            option: "Option 4",
+                            id: 4,
+                            isRight: false
                         }
                     ]
                 }
+               
             ]
         }
     ]
