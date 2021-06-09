@@ -15,6 +15,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+.text-main {
+  @apply text-gray-500 dark:text-gray-200;
+}
 
 .nav-btn {
   @apply px-2 transition-all duration-300 ease-in-out hover:shadow-xl rounded-lg;
