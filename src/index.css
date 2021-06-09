@@ -15,3 +15,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.nav-btn {
+  @apply px-2 transition-all duration-300 ease-in-out hover:shadow-xl rounded-lg;
+}
+.nav-height {
+  height: 10vh;
+}
+.main-height {
+  height: 90vh;
+}
