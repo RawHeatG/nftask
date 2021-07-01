@@ -37,8 +37,8 @@ export function QuizArena() {
     };
     const evaluateOption = (action: Action) => {
       if (action.type === "EVALUATE") {
-        console.log("Id recieved: ", action.payload);
-        console.log({ quizDb });
+        // console.log("Id recieved: ", action.payload);
+        // console.log({ quizDb });
         quizData.questions[currentQuestionNumber].selected = action.payload.id;
         action.payload.isRight
           ? setOptionStyle({ backgroundColor: "#A3E635", color: "white" })
@@ -58,10 +58,16 @@ export function QuizArena() {
         <h2>
           Question {currentQuestionNumber + 1}/{quizData.questions.length}
         </h2>
+        <img
+          src={quizData.questions[currentQuestionNumber].imgUrl}
+          alt="Question"
+          className="max-w-full xl:max-w-screen-lg m-12 rounded-lg"
+        />
         <div className="question-container">
-          <h2 className="border-b-2 pb-2 mb-2">
+          <h2 className="">
             Q: {quizData.questions[currentQuestionNumber].question}
           </h2>
+          <div className="h-1 bg-gradient-to-r from-green-400 to-blue-500 rounded my-2"></div>
           <div className="option-container">
             {console.log(quizData.questions[currentQuestionNumber])}
             {quizData.questions[currentQuestionNumber].options.map((opt) => (

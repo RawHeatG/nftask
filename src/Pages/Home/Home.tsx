@@ -6,8 +6,6 @@ import { useEffect } from "react";
 
 export function Home() {
   const { dispatch } = useQuiz();
-  // console.log({ quizDb });
-
   useEffect(() => {
     dispatch({ type: "RESET" });
   }, []);

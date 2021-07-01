@@ -6,6 +6,7 @@ export type Option = {
 
 export type Question = {
     question: string;
+    imgUrl: string;
     options: Option[];
     selected: number | null;
 }
