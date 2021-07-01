@@ -1,12 +1,19 @@
 import { quizDb } from "../../data";
 import { useQuiz } from "../../Contexts";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
+// import { useEffect } from "react";
 
 export function Home() {
   const { dispatch } = useQuiz();
+  // console.log({ quizDb });
+
+  useEffect(() => {
+    dispatch({ type: "RESET" });
+  }, []);
   return (
     <>
-      <div className="main-height my-auto flex flex-col items-center justify-center  dark:text-white dark:bg-gray-800">
+      <div className="main-height my-auto flex flex-col items-center justify-center">
         <div className="pb-24">
           <h1 className="text-center text-8xl text-transparent bg-clip-text bg-gradient-to-r from-green-300 to-green-400 font-sans font-bold">
             NFT
@@ -25,7 +32,12 @@ export function Home() {
             <Link to="/">
               <button
                 className="border-2 p-2 m-2 rounded-xl border-gray-400 dark:border-gray-100 text-xl text-main hover:border-l-2"
-                onClick={() => dispatch({ type: "LOAD_QUIZ", payload: quiz })}
+                onClick={() => {
+                  console.log(quiz);
+                  // const yolo = { ...quiz };
+                  // console.log(yolo === quiz);
+                  dispatch({ type: "LOAD_QUIZ", payload: quiz });
+                }}
               >
                 {quiz.name}
               </button>

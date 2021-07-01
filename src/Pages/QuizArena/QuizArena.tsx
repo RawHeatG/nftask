@@ -1,16 +1,24 @@
 import { useQuiz, Action } from "../../Contexts";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Quiz } from "../../data.type";
+import { quizDb } from "../../data";
 import "./QuizArena.css";
 
 export function QuizArena() {
   const [optionStyle, setOptionStyle] = useState({});
+  const [isButtonEnabled, setIsButtobEnabled] = useState<boolean>(false);
   const navigate = useNavigate();
 
   const {
     state: { currentQuestionNumber, score, quizData },
     dispatch,
   } = useQuiz();
+
+  // const localQuiz = { ...(quizData as Quiz) };
+  // // console.log(localQuiz === quizData);
+  // // console.log({ quizData });
+  // console.log({ localQuiz });
 
   if (quizData === null) {
     return (
@@ -19,35 +27,47 @@ export function QuizArena() {
       </div>
     );
   } else {
+    const func = () => {
+      if (currentQuestionNumber + 1 === quizData.questions.length) {
+        navigate("/score");
+      } else {
+        dispatch({ type: "NEXT_QUESTION" });
+      }
+      setIsButtobEnabled(false);
+    };
     const evaluateOption = (action: Action) => {
       if (action.type === "EVALUATE") {
+        console.log("Id recieved: ", action.payload);
+        console.log({ quizDb });
         quizData.questions[currentQuestionNumber].selected = action.payload.id;
-        dispatch({ type: "SAVE_SELECTED_OPTION", payload: quizData });
         action.payload.isRight
-          ? setOptionStyle({ backgroundColor: "green", color: "white" })
-          : setOptionStyle({ backgroundColor: "red", color: "white" });
+          ? setOptionStyle({ backgroundColor: "#A3E635", color: "white" })
+          : setOptionStyle({ backgroundColor: "#EF4444", color: "white" });
+        dispatch({ type: "SAVE_SELECTED_OPTION", payload: quizData });
+
         dispatch({ type: "EVALUATE", payload: action.payload });
       }
-      currentQuestionNumber + 1 === quizData?.questions.length
-        ? navigate("/score")
-        : dispatch({ type: "NEXT_QUESTION" });
+      setIsButtobEnabled(true);
+      setTimeout(func, 1000);
     };
 
     return (
-      <div className="main-height text-2xl text-main flex flex-col items-center dark:text-white dark:bg-gray-800">
+      <div className="main-height text-main flex flex-col items-center">
         <h1>{quizData.name}</h1>
         <p>{score} : Score</p>
         <h2>
           Question {currentQuestionNumber + 1}/{quizData.questions.length}
         </h2>
-        <div className="relative w-full border-4 p-6 rounded-3xl">
+        <div className="question-container">
           <h2 className="border-b-2 pb-2 mb-2">
             Q: {quizData.questions[currentQuestionNumber].question}
           </h2>
-          <div className="w-full flex flex-col items-center">
+          <div className="option-container">
+            {console.log(quizData.questions[currentQuestionNumber])}
             {quizData.questions[currentQuestionNumber].options.map((opt) => (
               <button
-                className="w-full border-2 rounded-xl p-1 m-1 "
+                disabled={isButtonEnabled}
+                className="option-style"
                 style={
                   quizData.questions[currentQuestionNumber].selected === opt.id
                     ? { ...optionStyle }

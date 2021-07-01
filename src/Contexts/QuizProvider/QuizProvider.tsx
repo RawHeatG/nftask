@@ -16,7 +16,7 @@ const QuizContext = createContext<{
 
 export const QuizProvider: FC = ({ children }) => {
   const [state, dispatch] = useReducer(quizReducer, initialState);
-
+  console.log("Quiz Provider se:", state);
   return (
     <QuizContext.Provider value={{ state, dispatch }}>
       {children}

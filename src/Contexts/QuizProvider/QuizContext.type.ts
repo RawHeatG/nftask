@@ -12,3 +12,4 @@ export type Action =
 | { type: "EVALUATE"; payload: Option }
 | { type: "NEXT_QUESTION" }
 | { type: "SAVE_SELECTED_OPTION"; payload: Quiz}
+| { type: "RESET"}
