@@ -1,7 +1,6 @@
 import { createContext, useContext, useReducer, Dispatch, FC } from "react";
 import { Action, InitialState } from "./QuizContext.type";
 import { quizReducer } from "./QuizReducer";
-import { quizDb } from "../../data";
 
 export const initialState: InitialState = {
   quizData: null,
@@ -16,8 +15,8 @@ const QuizContext = createContext<{
 }>({ state: initialState, dispatch: (action: Action) => null });
 
 export const QuizProvider: FC = ({ children }) => {
-  console.log({ quizDb });
   const [state, dispatch] = useReducer(quizReducer, initialState);
+
   console.log("Quiz Provider se:", state);
   return (
     <QuizContext.Provider value={{ state, dispatch }}>

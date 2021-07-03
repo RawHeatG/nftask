@@ -1,12 +1,10 @@
 import { InitialState, Action } from "./QuizContext.type";
-import { initialState } from "./QuizProvider";
+import { initialState } from "./QuizContext";
 
 export const quizReducer = (state: InitialState, action: Action): InitialState => {
 
   switch (action.type) {
     case "LOAD_QUIZ":
-      // const arpan = { ...action.payload }
-      // console.log("FRom reducer", action.payload)
       return { ...state, quizData: { ...action.payload } };
     case "NEXT_QUESTION":
       return { ...state, currentQuestionNumber: state.currentQuestionNumber + 1, isOptionSelected: false }
@@ -26,6 +24,7 @@ export const quizReducer = (state: InitialState, action: Action): InitialState =
       )
     case "SAVE_SELECTED_OPTION":
       return { ...state, quizData: action.payload }
+
     case "RESET":
       return initialState
     default:

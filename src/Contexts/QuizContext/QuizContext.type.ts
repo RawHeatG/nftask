@@ -8,8 +8,8 @@ export type InitialState = {
 };
 
 export type Action =
-| { type: "LOAD_QUIZ"; payload: Quiz }
-| { type: "EVALUATE"; payload: Option }
-| { type: "NEXT_QUESTION" }
-| { type: "SAVE_SELECTED_OPTION"; payload: Quiz}
-| { type: "RESET"}
+    | { type: "LOAD_QUIZ"; payload: Quiz }
+    | { type: "EVALUATE"; payload: Option }
+    | { type: "NEXT_QUESTION" }
+    | { type: "SAVE_SELECTED_OPTION"; payload: Quiz }
+    | { type: "RESET" }

@@ -1,8 +1,6 @@
 import { useQuiz, Action } from "../../Contexts";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Quiz } from "../../data.type";
-import { quizDb } from "../../data";
 import "./QuizArena.css";
 
 export function QuizArena() {
@@ -14,11 +12,6 @@ export function QuizArena() {
     state: { currentQuestionNumber, score, quizData },
     dispatch,
   } = useQuiz();
-
-  // const localQuiz = { ...(quizData as Quiz) };
-  // // console.log(localQuiz === quizData);
-  // // console.log({ quizData });
-  // console.log({ localQuiz });
 
   if (quizData === null) {
     return (
@@ -37,8 +30,6 @@ export function QuizArena() {
     };
     const evaluateOption = (action: Action) => {
       if (action.type === "EVALUATE") {
-        // console.log("Id recieved: ", action.payload);
-        // console.log({ quizDb });
         quizData.questions[currentQuestionNumber].selected = action.payload.id;
         action.payload.isRight
           ? setOptionStyle({ backgroundColor: "#A3E635", color: "white" })
