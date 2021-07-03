@@ -1,3 +1,4 @@
+import { Loader } from "../../Components";
 import { useQuiz } from "../../Contexts";
 
 export function ScoreBoard() {
@@ -12,7 +13,9 @@ export function ScoreBoard() {
       </h1>
 
       {!quizData ? (
-        <h1>Loading...</h1>
+        <div>
+          <Loader />
+        </div>
       ) : (
         <div>
           <p className="mt-16 text-2xl">Your Score: {score}</p>

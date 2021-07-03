@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { API_URL } from "../../utils";
 import { Quiz } from "../../data.type";
+import { Loader } from "../../Components";
 
 export function Home() {
   const [quizes, setQuizes] = useState<Quiz[] | null>(null);
@@ -38,13 +39,15 @@ export function Home() {
           </h2>
         </div>
         {quizes === null ? (
-          <h1>Loding...</h1>
+          <div>
+            <Loader />
+          </div>
         ) : (
           <div>
             <h3 className="text-main mb-10 text-2xl">Select the quiz</h3>
             <div className="flex flex-col items-center">
               {quizes.map((quiz) => (
-                <Link to="/">
+                <Link to="/quiz">
                   <button
                     key={quiz.name}
                     className="border-2 p-2 m-2 rounded-xl border-gray-400 dark:border-gray-100 text-xl text-main hover:border-l-2"

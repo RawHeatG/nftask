@@ -1,6 +1,7 @@
 import { useQuiz, Action } from "../../Contexts";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Loader } from "../../Components";
 import "./QuizArena.css";
 
 export function QuizArena() {
@@ -16,7 +17,7 @@ export function QuizArena() {
   if (quizData === null) {
     return (
       <div>
-        <h1>Loading..</h1>
+        <Loader />
       </div>
     );
   } else {

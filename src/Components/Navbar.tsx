@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
 import { useTheme } from "../Contexts";
 
 export const Navbar = () => {
@@ -57,10 +56,10 @@ export const Navbar = () => {
               </svg>
             )}
           </button>
-          <Link to="/home" className="nav-btn">
+          <Link to="/" className="nav-btn">
             Home
           </Link>
-          <Link to="/" className="nav-btn">
+          <Link to="/quiz" className="nav-btn">
             Quiz
           </Link>
           <Link to="/score" className="nav-btn">
