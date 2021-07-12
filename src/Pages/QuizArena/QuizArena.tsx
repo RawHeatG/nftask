@@ -1,15 +1,15 @@
 import { useQuiz, Action } from "../../Contexts";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Loader, Timer } from "../../Components";
+import { Loader } from "../../Components";
 import "./QuizArena.css";
-import { useEffect } from "react";
+// import { useEffect } from "react";
 
 export function QuizArena() {
   const [optionStyle, setOptionStyle] = useState({});
   const [isButtonEnabled, setIsButtobEnabled] = useState<boolean>(false);
   const navigate = useNavigate();
-  const [timeLeft, setTimeLeft] = useState<number>(15);
+  // const [timeLeft, setTimeLeft] = useState<number>(15);
 
   const {
     state: { currentQuestionNumber, score, quizData },
@@ -56,7 +56,7 @@ export function QuizArena() {
         dispatch({ type: "EVALUATE", payload: action.payload });
       }
       setIsButtobEnabled(true);
-      setTimeLeft(15);
+      // setTimeLeft(15);
       setTimeout(func, 1000);
     };
 

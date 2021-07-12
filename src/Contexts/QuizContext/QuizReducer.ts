@@ -1,4 +1,4 @@
-import { InitialState, Action } from "./QuizContext.type";
+import { InitialState, Action } from "./QuizContext.types";
 import { initialState } from "./QuizContext";
 
 export const quizReducer = (state: InitialState, action: Action): InitialState => {

@@ -1,5 +1,5 @@
 import { createContext, useContext, useReducer, Dispatch, FC } from "react";
-import { Action, InitialState } from "./QuizContext.type";
+import { Action, InitialState } from "./QuizContext.types";
 import { quizReducer } from "./QuizReducer";
 
 export const initialState: InitialState = {
