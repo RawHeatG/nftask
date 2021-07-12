@@ -13,12 +13,12 @@ export const quizReducer = (state: InitialState, action: Action): InitialState =
         action.payload.isRight
           ? {
             ...state,
-            score: state.score + 1,
+            score: state.score + 10,
             isOptionSelected: true
           }
           : {
             ...state,
-            score: state.score - 1,
+            score: state.score - 5,
             isOptionSelected: true
           }
       )

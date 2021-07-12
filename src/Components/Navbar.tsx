@@ -6,27 +6,29 @@ export const Navbar = () => {
   return (
     <>
       <nav className="nav-height w-screen flex items-center justify-between px-6 py-6 shadow-md text-2xl text-gray-50 bg-gradient-to-r from-green-400 to-blue-500">
-        <div className="transform-none transition-all hover:transform rotate-180">
-          <svg
-            className="w-12 h-12"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"
-            />
-          </svg>
-        </div>
-        <div className="">
+        <Link to="/">
+          <div className="transform-none transition-all hover:transform rotate-180">
+            <svg
+              className="w-12 h-12"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5"
+              />
+            </svg>
+          </div>
+        </Link>
+        <div className="flex align-center">
           <button onClick={() => toggleTheme()}>
             {theme === "dark" ? (
               <svg
-                className="w-6 h-6"
+                className="w-8 h-8"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -41,7 +43,7 @@ export const Navbar = () => {
               </svg>
             ) : (
               <svg
-                className="w-6 h-6"
+                className="w-8 h-8"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -56,7 +58,7 @@ export const Navbar = () => {
               </svg>
             )}
           </button>
-          <Link to="/" className="nav-btn">
+          {/* <Link to="/" className="nav-btn">
             Home
           </Link>
           <Link to="/quiz" className="nav-btn">
@@ -64,7 +66,7 @@ export const Navbar = () => {
           </Link>
           <Link to="/score" className="nav-btn">
             Score
-          </Link>
+          </Link> */}
         </div>
       </nav>
     </>

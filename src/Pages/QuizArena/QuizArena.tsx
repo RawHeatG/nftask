@@ -1,18 +1,34 @@
 import { useQuiz, Action } from "../../Contexts";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Loader } from "../../Components";
+import { Loader, Timer } from "../../Components";
 import "./QuizArena.css";
+import { useEffect } from "react";
 
 export function QuizArena() {
   const [optionStyle, setOptionStyle] = useState({});
   const [isButtonEnabled, setIsButtobEnabled] = useState<boolean>(false);
   const navigate = useNavigate();
+  const [timeLeft, setTimeLeft] = useState<number>(15);
 
   const {
     state: { currentQuestionNumber, score, quizData },
     dispatch,
   } = useQuiz();
+
+  // useEffect(() => {
+  //   const timerFunction = () => {
+  //     if (timeLeft <= 1) {
+  //       clearInterval(timerId);
+  //     } else {
+  //       setTimeLeft((time) => time - 1);
+  //     }
+  //   };
+
+  //   const timerId = setInterval(timerFunction, 1000);
+  // }, [currentQuestionNumber]);
+
+  // console.log({ timeLeft });
 
   if (quizData === null) {
     return (
@@ -40,20 +56,24 @@ export function QuizArena() {
         dispatch({ type: "EVALUATE", payload: action.payload });
       }
       setIsButtobEnabled(true);
+      setTimeLeft(15);
       setTimeout(func, 1000);
     };
 
     return (
       <div className="main-height text-main flex flex-col items-center">
-        <h1>{quizData.name}</h1>
-        <p>{score} : Score</p>
-        <h2>
-          Question {currentQuestionNumber + 1}/{quizData.questions.length}
-        </h2>
+        {/* <Timer timeLeft={timeLeft} /> */}
+        {/* <h1>{quizData.name}</h1> */}
+        <div className="flex justify-between w-80 text-2xl">
+          <div className="">
+            Question {currentQuestionNumber + 1}/{quizData.questions.length}
+          </div>
+          <div>{score} : Score</div>
+        </div>
         <img
           src={quizData.questions[currentQuestionNumber].imgUrl}
           alt="Question"
-          className="max-w-full xl:max-w-screen-lg m-12 rounded-lg"
+          className="max-w-full max-h-80 xl:max-w-screen-lg  m-12 rounded-lg"
         />
         <div className="question-container">
           <h2 className="">
@@ -79,8 +99,11 @@ export function QuizArena() {
               </button>
             ))}
           </div>
-          <div className="text-center w-full border-2 rounded-xl p-1 m-1">
-            <button onClick={() => evaluateOption({ type: "NEXT_QUESTION" })}>
+          <div>
+            <button
+              className="text-center w-full border-2 rounded-xl p-1 m-1"
+              onClick={() => evaluateOption({ type: "NEXT_QUESTION" })}
+            >
               Skip
             </button>
           </div>

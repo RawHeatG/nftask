@@ -26,10 +26,16 @@ export function ScoreBoard() {
                 {ques.options.map((opt) => {
                   optionStyle = {};
                   if (ques.selected === opt.id && !opt.isRight) {
-                    optionStyle = { backgroundColor: "red", color: "white" };
+                    optionStyle = {
+                      backgroundColor: "#EF4444",
+                      color: "white",
+                    };
                   }
                   if (opt.isRight) {
-                    optionStyle = { backgroundColor: "green", color: "white" };
+                    optionStyle = {
+                      backgroundColor: "#A3E635",
+                      color: "white",
+                    };
                   }
                   return (
                     <div className="option-style" style={{ ...optionStyle }}>
