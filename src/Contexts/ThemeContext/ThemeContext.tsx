@@ -3,7 +3,7 @@ import { useState, useContext, createContext, FC } from "react";
 type Theme = "light" | "dark";
 
 const ThemeContext = createContext<{ theme: Theme; toggleTheme: Function }>({
-  theme: "light",
+  theme: "dark",
   toggleTheme: () => null,
 });
 

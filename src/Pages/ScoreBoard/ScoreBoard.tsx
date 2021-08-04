@@ -33,7 +33,7 @@ export function ScoreBoard() {
                   }
                   if (opt.isRight) {
                     optionStyle = {
-                      backgroundColor: "#A3E635",
+                      backgroundColor: "#84CC16",
                       color: "white",
                     };
                   }

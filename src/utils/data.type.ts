@@ -15,6 +15,7 @@ export type Quiz = {
     name: string;
     id: number;
     questions: Question[];
+    quizImg: string;
 }
 
 export type QuizDb = {

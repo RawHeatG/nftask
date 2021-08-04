@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { API_URL } from "../../utils";
-import { Quiz } from "../../data.type";
+import { Quiz } from "../../utils/data.type";
 import { Loader } from "../../Components";
 
 export function Home() {
@@ -43,21 +43,25 @@ export function Home() {
             <Loader />
           </div>
         ) : (
-          <div>
+          <div className="flex flex-col items-center">
             <h3 className="text-main mb-10 text-2xl">Select the quiz</h3>
-            <div className="flex flex-col items-center">
+            <div className="flex flex-wrap items-center justify-center">
+              {console.log(quizes)}
               {quizes.map((quiz) => (
                 <Link to="/quiz">
-                  <button
-                    key={quiz.name}
-                    className="border-2 p-2 m-2 rounded-xl border-gray-400 dark:border-gray-100 text-xl text-main hover:border-l-2"
+                  <div
+                    className="w-auto md:w-72 p-4 m-2 flex flex-col justify-center items-center border-2 rounded"
                     onClick={() => {
                       console.log(quiz);
                       dispatch({ type: "LOAD_QUIZ", payload: quiz });
                     }}
                   >
-                    {quiz.name}
-                  </button>
+                    <img
+                      className="rounded"
+                      src={quiz.quizImg}
+                      alt={quiz.name}
+                    />
+                  </div>
                 </Link>
               ))}
             </div>

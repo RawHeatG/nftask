@@ -49,7 +49,7 @@ export function QuizArena() {
       if (action.type === "EVALUATE") {
         quizData.questions[currentQuestionNumber].selected = action.payload.id;
         action.payload.isRight
-          ? setOptionStyle({ backgroundColor: "#A3E635", color: "white" })
+          ? setOptionStyle({ backgroundColor: "#84CC16", color: "white" })
           : setOptionStyle({ backgroundColor: "#EF4444", color: "white" });
         dispatch({ type: "SAVE_SELECTED_OPTION", payload: quizData });
 

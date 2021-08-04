@@ -1,4 +1,4 @@
-import { Option, Quiz } from "../../data.type";
+import { Option, Quiz } from "../../utils/data.type";
 
 export type InitialState = {
     quizData: Quiz | null;
